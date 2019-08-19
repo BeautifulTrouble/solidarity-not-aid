@@ -84,7 +84,7 @@
           </a>
           <a :href="content.mailto" target="_blank" class="db spaced">Contact</a>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA 4.0" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
-          <h3 class="dib">Beautiful Trouble 2019, solidaritynotaid.com v1.0.1</h3>
+          <p class="dib">Beautiful Trouble 2019, solidaritynotaid.com v1.0.2</p>
         </div>
       </div>
     </footer>
@@ -494,7 +494,7 @@ footer {
   img {
     color: tint($primary, 10%);
   }
-  h3, p {
+  p {
     font-weight: normal;
     margin: 0 1rem;
     color: tint($primary, 10%);
