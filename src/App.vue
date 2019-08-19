@@ -83,8 +83,8 @@
             <img src="./logo-bt-inverse.png" class="logo bt">
           </a>
           <a :href="content.mailto" target="_blank" class="db spaced">Contact</a>
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="dib"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
-          <h3 class="dib">Beautiful Trouble 2019, solidaritynotaid.com v1.0.0</h3>
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA 4.0" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+          <h3 class="dib">Beautiful Trouble 2019, solidaritynotaid.com v1.0.1</h3>
         </div>
       </div>
     </footer>
@@ -302,6 +302,7 @@ nav {
 .menu {
   h1 {
     text-align: center;
+    margin: .5rem;
   }
   border-bottom: 8px solid $accent;
   box-shadow: inset 0 -10px 10px tint($primary, 90%);
@@ -310,7 +311,8 @@ nav {
   align-items: center;
   flex-direction: column;
   position: fixed;
-  padding: $nav-height * 2 0;
+  padding-top: $nav-height * 3;
+  padding-bottom: $nav-height * 2;
   top: 0; bottom: 0;
   left: 0; right: 0;
   background-image: url(./stripes.png);
@@ -489,7 +491,11 @@ footer {
   a {
     color: white;
   }
+  img {
+    color: tint($primary, 10%);
+  }
   h3, p {
+    font-weight: normal;
     margin: 0 1rem;
     color: tint($primary, 10%);
     @include breakpoint($sm) {
