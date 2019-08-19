@@ -18,6 +18,7 @@
     "vue2-smooth-scroll": "^1.1.0"
   },
   "devDependencies": {
+    "@newsdev/archieml-loader": "https://github.com/newsdev/archieml-loader",
     "@vue/cli-plugin-babel": "^3.10.0",
     "@vue/cli-plugin-eslint": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
