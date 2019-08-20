@@ -15,7 +15,8 @@ fi
 
 # Build process goes here
 
-alias yarn=yarnpkg
+shopt -s expand_aliases
+yarn=yarnpkg
 
 MD5="$(md5sum package.json)"
 git pull || exit
