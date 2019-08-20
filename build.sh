@@ -1,6 +1,9 @@
 #!/bin/bash
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+alias yarn=yarnpkg
+cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-cd "$DIR"
-git pull && yarnpkg build
+MD5=$(md5sum package.json)
+git pull || exit
+[ $MD5 = $(md5sum package.json) ] || yarn install
+yarn build
