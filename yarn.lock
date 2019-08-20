@@ -1339,11 +1339,6 @@ arch@^2.1.1:
   resolved "https://registry.yarnpkg.com/arch/-/arch-2.1.1.tgz#8f5c2731aa35a30929221bb0640eed65175ec84e"
   integrity sha512-BLM56aPo9vLLFVa8+/+pJLnrZ7QGGTVHWsCwieAWT9o9K8UeGaQbzZbGoabWLOo2ksBCztoXdqBZBplqLDDCSg==
 
-archieml@0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/archieml/-/archieml-0.4.2.tgz#21e014c03d9113a906b682b5d4ad171681e77f36"
-  integrity sha1-IeAUwD2RE6kGtoK11K0XFoHnfzY=
-
 archieml@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/archieml/-/archieml-0.3.1.tgz#809536956bb1b757b76c1066cf2ddd5ce40aad30"
