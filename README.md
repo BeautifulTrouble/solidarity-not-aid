@@ -1,7 +1,8 @@
 # Solidarity ≠ Aid 
-## A project of Beautiful Trouble
 
-Content editors can make changes to the [ArchieML](http://archieml.org) document called CONTENT.
+### A project of Beautiful Trouble
+
+Editors can make changes to the [ArchieML](http://archieml.org) document here: **[content.aml](https://github.com/BeautifulTrouble/solidarity-not-aid/edit/master/src/CONTENT.aml)**
 
 
 ## Project setup
@@ -9,12 +10,12 @@ Content editors can make changes to the [ArchieML](http://archieml.org) document
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compile and hot-reloads for development
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Compile and minifies for production
 ```
 yarn build
 ```
