@@ -10,7 +10,6 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "headroom.js": "^0.9.4",
-    "less-loader": "^5.0.0",
     "showdown": "^1.9.0",
     "showdown-target-blank": "^1.0.2",
     "vue": "^2.6.10",
