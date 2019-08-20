@@ -93,7 +93,7 @@
 
 <script>
 import Headroom from 'headroom.js'
-import content from './content.js'
+import content from './content.aml'
 
 export default {
   data: () => ({
