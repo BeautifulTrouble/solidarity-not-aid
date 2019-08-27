@@ -10,13 +10,14 @@
          :key="index" 
          :href="'#' + slugify(section.title)"
          class="link">
+        <!-- These ids should be made unique -->
         <h1>{{ section.title }}</h1></a>
     </div>
     <nav ref="nav">
       <div class="wrapper container-fluid">
-        <div class="col-sm-12 col-md-8 col-lg-6">
+        <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
           <a href="#top" v-smooth-scroll="{duration: 250}" @click="showMenu = false">
-            <h2 class="hp">S&#x2260;A</h2>
+            <h2 class="hover-primary">S&#x2260;A</h2>
           </a>
           <div @click="showMenu = !showMenu" class="menu-toggle show-sm">
             <div></div>
@@ -47,9 +48,8 @@
           <section v-for="(section, index) in content.sections"
                    v-scroll-reveal.reset="{origin: 'left', distance: '50px', opacity: .2}"
                    :key="index"
-                   :class="'accent' + ((index % 4) + 1)"
                    :id="slugify(section.title)">
-            <h1 @click="navTo(section.title)" class="hp">{{ section.title }}</h1>
+            <h1 @click="navTo(section.title)" class="hover-primary">{{ section.title }}</h1>
             <div v-if="slugify(section.title) == 'bio'" class="bio-pic" />
             <div v-html="markdown(section.content)" />
             <div v-if="slugify(section.title) == 'principles-of-solidarity'">
@@ -84,7 +84,7 @@
           </a>
           <a :href="content.mailto" target="_blank" class="db spaced">Contact</a>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA 4.0" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
-          <p class="dib">Beautiful Trouble 2019, solidaritynotaid.com v1.0.4</p>
+          <p class="dib">Beautiful Trouble 2019, solidaritynotaid.com v1.0.5</p>
         </div>
       </div>
     </footer>
@@ -200,9 +200,6 @@ $accent4: #6ec6c9;
 }
 
 .show-sm {
-  @include breakpoint($sm) {
-    display: initial;
-  }
   @include breakpoint($upper) {
     display: none;
   }
@@ -211,15 +208,12 @@ $accent4: #6ec6c9;
   @include breakpoint($sm) {
     display: none;
   }
-  @include breakpoint($upper) {
-    display: initial;
-  }
 }
 .db { display: block; }
 .dib { display: inline-block; vertical-align: top; }
 
 @include breakpoint($upper) {
-  .hp {
+  .hover-primary {
     transition: all .2s ease-in-out;
     &:hover { color: $primary }
   }
@@ -280,22 +274,19 @@ nav {
   }
   background-color: white;
   box-shadow: 0 1px 20px 0 tint($primary, 90%);
-  div {
-    height: 100%;
+  > div > div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    @include breakpoint($sm) {
+      padding: 0 1.5rem !important; // Overrides padding from the grid
+    }
   }
   a {
-    @include breakpoint($upper) {
-      padding: 1rem 1rem;
-    }
+    padding: .8rem 0;
     color: $med;
-  }
-  @include breakpoint($sm) {
-    > div > div {
-      justify-content: space-between;
-      margin-left: 2rem;
+    h2 {
+      display: inline;
     }
   }
 }
@@ -327,9 +318,7 @@ nav {
   }
 }
 .menu-toggle {
-  padding-right: 2rem;
-  padding-top: .8rem;
-  padding-left: 1rem;
+  padding: .8rem 0;
   > div {
     height: 4px;
     width: 30px;
