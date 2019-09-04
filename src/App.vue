@@ -112,9 +112,7 @@ export default {
     submitForm(e) {
       e.preventDefault()
       this.formError = false;
-      let url = 'https://docs.google.com/forms/d/e/1FAIpQLSdo44FE4PE8ppSwkWpQw4npzdA2l92ghCs7iOEUtaiS4Luc6Q/formResponse'
-      // url = 'https://cors-anywhere.herokuapp.com/' + url // Proxy with automatic CORS headers
-      //let url = 'https://google-forms.beautifultrouble.org/forms/d/e/1FAIpQLSdo44FE4PE8ppSwkWpQw4npzdA2l92ghCs7iOEUtaiS4Luc6Q/formResponse'
+      let url = 'https://google-forms.beautifultrouble.org/forms/d/e/1FAIpQLSdo44FE4PE8ppSwkWpQw4npzdA2l92ghCs7iOEUtaiS4Luc6Q/formResponse'
       this.$http.get(url, {params: {
           usp: 'pp_url',
           'entry.1978900174': this.name,
@@ -124,9 +122,8 @@ export default {
         }}).then(() => {
           this.result = 'Thanks!'
         }).catch(() => {
-          //this.formError = true;
-          //this.result = 'Sorry, something went wrong. Please get in touch by email!'
-          this.result = 'Thanks!'
+          this.formError = true;
+          this.result = 'Sorry, something went wrong. Please get in touch by email!'
         })
     }
   },
