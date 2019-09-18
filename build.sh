@@ -21,3 +21,5 @@ MD5="$(md5sum package.json)"
 git pull || exit
 [ "$MD5" = "$(md5sum package.json)" ] || $yarn install
 $yarn build
+rm -rf site
+cp -a dist site
