@@ -120,6 +120,9 @@ export default {
           'entry.650237374': this.suggestion,
           submit: 'Submit',
         }}).then(() => {
+          this.name = ''
+          this.email = ''
+          this.suggestion = ''
           this.result = 'Thanks!'
         }).catch(() => {
           this.formError = true;
