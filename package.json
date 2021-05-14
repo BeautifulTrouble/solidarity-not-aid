@@ -1,6 +1,6 @@
 {
   "name": "solidarity-not-aid",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -27,7 +27,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "flexboxgrid-sass": "^8.0.5",
-    "node-sass": "^4.9.0",
+    "sass": "^1.0.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
   }
